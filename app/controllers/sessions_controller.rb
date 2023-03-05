@@ -6,7 +6,7 @@ class SessionsController < ApplicationController
     # authenticate the user
     @user = User.find_by({ "email" => params["email"] })
     if @user
-      if @user["password"] == params["password"]
+      if BCrypt::Password.new(@user["password"]) == params["password"]
         session["user_id"] = @user["id"]
         flash["notice"] = "Welcome, #{@user["first_name"]} you are logged in."
         redirect_to "/places"
