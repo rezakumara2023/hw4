@@ -16,7 +16,8 @@
     
     <div>
       <% if @current_user %>
-        <%= @current_user["first_name"] %>
+      Hello
+      <%= @current_user["email"]%> ,
         <a href="/logout">Logout</a>
       <% else %>
         <a href="/login">Login</a> | <a href="/users/new">Signup</a>
