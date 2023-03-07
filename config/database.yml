@@ -23,3 +23,7 @@ test:
 production:
   <<: *default
   database: db/production.sqlite3
+  adapter: postgresql
+  database: rezagram_production
+  username: rezagram
+  password: <%= ENV["REZAGRAM_DATABASE_PASSWORD"] %>
