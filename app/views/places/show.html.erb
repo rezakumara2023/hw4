@@ -15,7 +15,7 @@
           <img src="<%= url_for(post.uploaded_image) %>" class="img-fluid">
         <% else %>
           <img src="<%= post["image"] %>" class="img-fluid">
-<% end %>
+        <% end %>
       </div>
       <% end %>
       
@@ -29,4 +29,12 @@
   <p>
     <a href="/places">Back to All Places</a>
   </p>
+
+<%else%>
+          Please login to create post
+
 <% end %>
+
+
+
+        
