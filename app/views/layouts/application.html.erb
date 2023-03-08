@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Tacostagram Final</title>
+    <title>Rezagram</title>
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
@@ -22,7 +22,7 @@
         </li>
         <% if @current_user %>
             
-            <li class="nav-item">
+            <li class="nav-item mt-3">
               <span class="nav-link"> Hello <%= @current_user["email"]%> </span>
             </li>
             <li class="nav-item">
